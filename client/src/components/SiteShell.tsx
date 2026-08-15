@@ -17,15 +17,17 @@ export function SiteShell({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => { const onScroll = () => setScrolled(window.scrollY > 20); onScroll(); window.addEventListener("scroll", onScroll); return () => window.removeEventListener("scroll", onScroll); }, []);
+  useEffect(() => { setOpen(false); }, [location]);
+  useEffect(() => { if (!open) return; const onKeyDown = (event: KeyboardEvent) => { if (event.key === "Escape") setOpen(false); }; window.addEventListener("keydown", onKeyDown); return () => window.removeEventListener("keydown", onKeyDown); }, [open]);
   return <div className="site-shell">
     <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="header-bar">
         <Link href="/" className="brand" aria-label="العودة إلى الرئيسية"><BrandMark /><span><strong>Fahmi Ali</strong><small>ARCHITECTURE</small></span></Link>
-        <nav className={`main-nav ${open ? "is-open" : ""}`} aria-label="التنقل الرئيسي">
+        <nav id="main-navigation" className={`main-nav ${open ? "is-open" : ""}`} aria-label="التنقل الرئيسي">
           {nav.map(([label, href]) => <Link key={href} href={href} onClick={() => setOpen(false)} className={location === href ? "active" : ""}>{label}</Link>)}
           <Link href="/contact" className="nav-contact" onClick={() => setOpen(false)}>اتصل بي <SignalMatrix /></Link>
         </nav>
-        <button className="menu-toggle" type="button" onClick={() => setOpen(!open)} aria-label={open ? "إغلاق القائمة" : "فتح القائمة"} aria-expanded={open}>{open ? <X /> : <Menu />}</button>
+        <button className="menu-toggle" type="button" onClick={() => setOpen(!open)} aria-label={open ? "إغلاق القائمة" : "فتح القائمة"} aria-expanded={open} aria-controls="main-navigation">{open ? <X /> : <Menu />}</button>
       </div>
     </header>
     <main className="site-main">{children}</main>
