@@ -6,11 +6,13 @@ import { Link, useLocation } from "wouter";
 import { Download, ExternalLink, Instagram, Linkedin, Menu, MessageCircle, Phone, X } from "lucide-react";
 import { BrandMark } from "@/components/BrandMark";
 import { SignalMatrix } from "@/components/SignalMatrix";
-import { contact, sourceRoot } from "@/data/portfolio";
+import { contact } from "@/data/portfolio";
 
 const nav = [
   ["الرئيسية", "/"], ["عني", "/about"], ["المشاريع", "/projects"], ["الخدمات", "/services"], ["المدونة", "/blogs"], ["الشهادات", "/certificates"], ["الخبرات", "/experiences"], ["المناقشة", "/decssion"],
 ];
+const rightsOwner = "MohammadMAlHammadi";
+const rightsWhatsApp = "https://wa.me/967775412350";
 
 export function SiteShell({ children }: { children: ReactNode }) {
   const [location] = useLocation();
@@ -35,9 +37,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <div className="footer-grid">
         <section><div className="footer-brand"><BrandMark /><span><strong>Fahmi Ali</strong><small>ARCHITECTURE / TAIZ</small></span></div><p>{"مهندس معماري لتقديم الخدمات الهندسية المعتمدة لجميع متطلبات البناء والإنشاء المعماري بكل التفاصيل الملحقة مكتملة المخططات التنفيذية إلى الرفع والمحاكاة الواقعية لنمذجة فيديو يوافق واقع المبنى بنسب متوافقة ومعيارية."}</p><div className="socials"><a href={contact.social.facebook} target="_blank" rel="noreferrer" aria-label="Facebook"><ExternalLink /></a><a href={contact.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin /></a><a href={contact.social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram /></a><a href={contact.social.whatsapp} target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle /></a></div></section>
         <section><p className="footer-label">EXPLORE <SignalMatrix /></p><div className="footer-links">{nav.slice(0, 6).map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</div></section>
-        <section><p className="footer-label">CONTACT <SignalMatrix /></p><a className="footer-contact" href={`tel:${contact.phone}`}><Phone /> {contact.phone}</a><a className="footer-contact" href={`mailto:${contact.email}`}>{contact.email}</a><a className="footer-contact" href={contact.cv} target="_blank" rel="noreferrer"><Download /> السيرة الذاتية</a><a className="source-link" href={sourceRoot} target="_blank" rel="noreferrer">فتح الموقع الأصلي <ExternalLink /></a></section>
+        <section><p className="footer-label">CONTACT <SignalMatrix /></p><a className="footer-contact" href={`tel:${contact.phone}`}><Phone /> {contact.phone}</a><a className="footer-contact" href={`mailto:${contact.email}`}>{contact.email}</a><a className="footer-contact" href={contact.cv} target="_blank" rel="noreferrer"><Download /> السيرة الذاتية</a></section>
       </div>
-      <div className="footer-bottom"><span>© جميع الحقوق محفوظة | Fahmi Ali</span><span>TAIZ / YEMEN</span></div>
+      <div className="footer-bottom"><a className="rights-link" href={rightsWhatsApp} target="_blank" rel="noreferrer" aria-label={`التواصل مع ${rightsOwner} عبر WhatsApp`}>© جميع الحقوق محفوظة لـ {rightsOwner}</a><span>TAIZ / YEMEN</span></div>
     </footer>
   </div>;
 }

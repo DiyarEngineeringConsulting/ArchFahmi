@@ -1,7 +1,6 @@
 /**
  * Design reminder — مسار مادة وبناء: بيانات مصدرية لمحتوى Fahmi Ali، تُعرض ضمن إيقاع تحريري عربي داكن/عاجي دون اختلاق عناصر أو تغيير النصوص الأصلية.
  */
-export const sourceRoot = "https://aseel.66ghz.com/civil/eng/archFahmi";
 export const assetRoot = "https://aseel.66ghz.com/civil/public/uploads";
 
 export const contact = {
