@@ -22,6 +22,11 @@ body { background-color:var(--paper); background-image:radial-gradient(rgba(42,2
 .paper-section { background-color:var(--paper); background-image:linear-gradient(90deg,rgba(42,27,22,.04) 1px,transparent 1px),linear-gradient(rgba(42,27,22,.035) 1px,transparent 1px); background-size:88px 88px; }
 .profile-rail,.project-card,.blog-card,.timeline-card,.contact-layout { border-radius:3px; box-shadow:none; }
 .profile-rail { border:1px solid rgba(213,152,114,.32); }
+.metric-rail { max-width:1380px; margin:14px auto 0; display:grid; grid-template-columns:repeat(3,1fr); background:var(--ink-2); color:var(--ivory); border-top:2px solid var(--blue); }
+.metric-rail > div { display:grid; gap:5px; padding:24px 28px; border-left:1px solid rgba(213,152,114,.28); }
+.metric-rail > div:last-child { border-left:0; }
+.metric-rail b { color:var(--blue-bright); font:600 clamp(2rem,4vw,3.2rem)/1 var(--font-label); direction:ltr; }
+.metric-rail span { color:rgba(255,250,242,.75); font-size:13px; }
 .services-list { border-color:rgba(213,152,114,.36); }
 .service-row { border-color:rgba(213,152,114,.26); }
 .service-row:hover { padding-right:22px; background:linear-gradient(90deg,transparent,rgba(175,102,69,.10)); }
@@ -81,6 +86,7 @@ body { overflow-x:hidden; }
   .about-layout { grid-template-columns:1fr; gap:34px; }
   .about-layout > img { width:100%; max-width:460px; margin-inline:auto; aspect-ratio:5 / 4; object-position:center; }
   .about-copy { min-width:0; }
+  .metric-rail { margin-top:10px; }
 }
 @media (max-width:560px) {
   .site-header { padding-inline:8px; }
@@ -116,6 +122,9 @@ body { overflow-x:hidden; }
   .profile-rail { margin-top:30px; }
   .profile-rail img { height:185px; }
   .profile-rail > div,.profile-rail > a { padding:22px 19px; }
+  .metric-rail > div { padding:18px 14px; }
+  .metric-rail b { font-size:1.75rem; }
+  .metric-rail span { font-size:11px; }
   .service-row { padding-block:24px; }
   .service-row h3,.service-row h2 { font-size:1.35rem; }
   .project-stack { gap:17px; }
@@ -176,4 +185,7 @@ body { overflow-x:hidden; }
   .hero-side-note { display:none; }
   .project-image { min-height:200px; }
   .signal-matrix { font-size:8px; }
+  .metric-rail { grid-template-columns:1fr; }
+  .metric-rail > div { grid-template-columns:72px 1fr; align-items:baseline; border-left:0; border-bottom:1px solid rgba(213,152,114,.22); }
+  .metric-rail > div:last-child { border-bottom:0; }
 }

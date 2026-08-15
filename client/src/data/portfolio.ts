@@ -63,7 +63,7 @@ export const services = [
 ];
 
 export const blog = {
-  id: "5", title: "House Building", date: "31 Dec 1969", views: "9 مشاهدة", readTime: "1 دقيقة قراءة", tag: "#تصميم ورفع يحاكي الواقع الافتراضي للمبنى",
+  id: "5", title: "House Building", date: "مايو 2025", views: "89 مشاهدة", readTime: "1 دقيقة قراءة", tag: "#تصميم ورفع يحاكي الواقع الافتراضي للمبنى",
   image: `${assetRoot}/blog_thumbnails/6906a5cd071f1_Enscape_2025-06-04-03-35-53.jpg`,
   excerpt: "The last work in the past days I have done WORKED WITH: ALAHDAL Foundation for several Construction & engineering services.",
   body: [
