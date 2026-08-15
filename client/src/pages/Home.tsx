@@ -1,0 +1,21 @@
+/**
+ * Design reminder — مسار مادة وبناء: بطل داكن بمحور RTL واضح، ثم ورق دافئ ومسار مشاريع غير متماثل يستعمل الصور الأصلية كقلب للتجربة.
+ */
+import { ArrowDownLeft, ArrowUpLeft, Download, MapPin, MoveLeft } from "lucide-react";
+import { Link } from "wouter";
+import { ProjectCard } from "@/components/ProjectCard";
+import { SignalMatrix } from "@/components/SignalMatrix";
+import { SiteShell } from "@/components/SiteShell";
+import { bio, blog, contact, projects, services } from "@/data/portfolio";
+
+export default function Home() {
+  return <SiteShell>
+    <section className="hero"><div className="hero-visual" style={{ backgroundImage: `url(${projects[0].image})` }} aria-hidden="true" /><div className="hero-overlay" /><div className="hero-grid" /><div className="hero-content reveal"><div className="eyebrow"><SignalMatrix label="01" /><span>ARCHITECT / TAIZ CITY</span></div><p className="hero-kicker">Fahmi Ali</p><h1>من الفكرة الأولى إلى <em>تفاصيل</em> قابلة للتنفيذ.</h1><p className="hero-copy">{bio}</p><div className="hero-actions"><Link href="/projects" className="button button-primary">استكشف المشاريع <ArrowUpLeft /></Link><a href={contact.cv} target="_blank" rel="noreferrer" className="button button-ghost"><Download /> السيرة الذاتية</a></div></div><div className="hero-side-note"><span>01 — 05</span><p>نمذجة واقعية، رسومات تنفيذية، ومسارات بناء ذات أثر بصري واضح.</p><ArrowDownLeft /></div></section>
+    <section className="signal-strip"><p>DESIGN / DOCUMENT / VISUALIZE</p><SignalMatrix label="FM" /><p>ARCHITECTURAL SERVICES — TAIZ</p></section>
+    <section className="section paper-section intro-section"><div className="section-heading"><div><p className="eyebrow dark"><SignalMatrix label="02" /><span>PROFILE</span></p><h2>عمل معماري يبدأ <em>بالفهم</em> لا بالافتراض.</h2></div><p>{bio}</p></div><div className="profile-rail"><img src={contact.profileImage} alt="Fahmi Ali" loading="lazy" /><div><span>LOCATION</span><strong><MapPin /> {contact.location}</strong></div><Link href="/about">قراءة الملف المهني <MoveLeft /></Link></div></section>
+    <section className="section services-section"><div className="section-heading compact"><div><p className="eyebrow"><SignalMatrix label="03" /><span>SERVICES</span></p><h2>خدمات بصياغة <em>دقيقة.</em></h2></div><Link href="/services" className="text-link">عرض جميع الخدمات <ArrowUpLeft /></Link></div><div className="services-list">{services.map(service => <article key={service.number} className="service-row"><span className="service-number">{service.number}</span><div><p className="service-tag">{service.tag}</p><h3>{service.title}</h3><p>{service.description}</p></div><strong>{service.price}</strong></article>)}</div></section>
+    <section className="section paper-section projects-section"><div className="section-heading"><div><p className="eyebrow dark"><SignalMatrix label="04" /><span>SELECTED WORK</span></p><h2>مشاريع تُقرأ من <em>المادة</em> إلى المخطط.</h2></div><Link href="/projects" className="button button-ink">عرض جميع المشاريع <ArrowUpLeft /></Link></div><div className="project-stack">{projects.map((project, index) => <ProjectCard project={project} index={index} key={project.id} />)}</div></section>
+    <section className="section journal-section"><div className="journal-visual"><img src={blog.image} alt={blog.title} loading="lazy" /></div><div className="journal-copy"><p className="eyebrow"><SignalMatrix label="05" /><span>JOURNAL</span></p><p className="journal-stat">01 <small>مقالة منشورة</small></p><h2>{blog.title}</h2><p dir="ltr">{blog.excerpt}</p><Link href="/blogs/5" className="text-link">اقرأ المقال <ArrowUpLeft /></Link></div></section>
+    <section className="cta-section"><div><p className="eyebrow"><SignalMatrix label="06" /><span>NEXT STEP</span></p><h2>هل لديك مشروع <em>في ذهنك؟</em></h2><p>تواصل الآن لبدء محادثة حول أبعاد المشروع ومتطلباته الأولى.</p></div><div className="cta-actions"><Link href="/contact" className="button button-primary">اتصل بي <ArrowUpLeft /></Link><a href={contact.social.whatsapp} target="_blank" rel="noreferrer" className="button button-ghost">WhatsApp</a></div></section>
+  </SiteShell>;
+}
