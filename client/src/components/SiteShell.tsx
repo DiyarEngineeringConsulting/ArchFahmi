@@ -11,8 +11,7 @@ import { contact } from "@/data/portfolio";
 const nav = [
   ["الرئيسية", "/"], ["عني", "/about"], ["المشاريع", "/projects"], ["الخدمات", "/services"], ["المدونة", "/blogs"], ["الشهادات", "/certificates"], ["الخبرات", "/experiences"], ["المناقشة", "/decssion"],
 ];
-const rightsOwner = "MohammadMAlHammadi";
-const rightsWhatsApp = "https://wa.me/967775412350";
+const rightsOwner = "Fahmi Ali";
 
 export function SiteShell({ children }: { children: ReactNode }) {
   const [location] = useLocation();
@@ -39,7 +38,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         <section><p className="footer-label">EXPLORE <SignalMatrix /></p><div className="footer-links">{nav.slice(0, 6).map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</div></section>
         <section><p className="footer-label">CONTACT <SignalMatrix /></p><a className="footer-contact" href={`tel:${contact.phone}`}><Phone /> {contact.phone}</a><a className="footer-contact" href={`mailto:${contact.email}`}>{contact.email}</a><a className="footer-contact" href={contact.cv} target="_blank" rel="noreferrer"><Download /> السيرة الذاتية</a></section>
       </div>
-      <div className="footer-bottom"><a className="rights-link" href={rightsWhatsApp} target="_blank" rel="noreferrer" aria-label={`التواصل مع ${rightsOwner} عبر WhatsApp`}>© جميع الحقوق محفوظة لـ {rightsOwner}</a><span>TAIZ / YEMEN</span></div>
+      <div className="footer-bottom"><span>© جميع الحقوق محفوظة لـ {rightsOwner}</span><span>TAIZ / YEMEN</span></div>
     </footer>
   </div>;
 }

@@ -15,7 +15,7 @@ export const contact = {
     facebook: "https://www.facebook.com/share/1Y1bWhLrkC/",
     linkedin: "https://www.linkedin.com/in/fahmi-alganadi-36652237a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram: "https://www.instagram.com/arch.fahmi.ali011?igsh=MTU0ZnVjdndwY253eg==",
-    whatsapp: "https://wa.me/773691222",
+    whatsapp: "https://wa.me/967773691222",
   },
 };
 
