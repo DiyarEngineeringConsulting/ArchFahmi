@@ -36,6 +36,10 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "27", title: "مبنى مسجد الإسكان الديني — سقطرى، قلنسية", client: "داعم متبرع", description: "تصميم معماري لمسجد الإسكان الديني في قلنسية، سقطرى.", start: "2026/01/01", end: "2026/01/12", duration: "0 سنوات 0 أشهر 11 أيام", updated: "2026/01/12",
+    image: "/manus-storage/masjid-exterior-hero_06a367a5.jpg", media: ["/manus-storage/masjid-interior-wide_eadb47a6.jpg", "/manus-storage/masjid-interior-sunset_b64c8f2f.jpg", "/manus-storage/masjid-interior-prayer_ccc7c339.jpg", "/manus-storage/masjid-exterior-logo_5c7cc124.jpg", "/manus-storage/masjid-exterior-documentation_c0c5d966.jpg"],
+  },
+  {
     id: "26", title: "مبنى سكني استثماري", client: "محمد البريهي", description: "مبنى سكني استثماري طابقي", start: "2026/01/11", end: "2026/03/18", duration: "0 سنوات 2 أشهر 7 أيام", updated: "2026/07/22 11:17",
     image: `${assetRoot}/projects/6a610948bfbbe_1000093783.jpg`, media: [`${assetRoot}/projects/6a610948c0af7_1000093249.jpg`],
   },
@@ -63,10 +67,10 @@ export const services = [
 ];
 
 export const blog = {
-  id: "5", title: "House Building", date: "مايو 2025", views: "89 مشاهدة", readTime: "1 دقيقة قراءة", tag: "#تصميم ورفع يحاكي الواقع الافتراضي للمبنى",
+  id: "5", title: "تصميم منزل سكني في الحوبان", date: "مايو 2025", views: "89 مشاهدة", readTime: "دقيقة واحدة للقراءة", tag: "#تصميم_ورفع_يحاكي_الواقع_الافتراضي_للمبنى",
   image: `${assetRoot}/blog_thumbnails/6906a5cd071f1_Enscape_2025-06-04-03-35-53.jpg`,
-  excerpt: "The last work in the past days I have done WORKED WITH: ALAHDAL Foundation for several Construction & engineering services.",
+  excerpt: "من آخر الأعمال التي أنجزتها خلال الأيام الماضية، بالتعاون مع مؤسسة الأهدل لعدة خدمات إنشائية وهندسية.",
   body: [
-    "The last work in the past days I have done", "WORKED WITH: ALAHDAL Foundation for several Construction & engineering services.", "LOCATION: Taiz city - Alhoban area.", "DATE: 2025/5/", "OWNER: Abdulalem Ali.", "TYPE: House building design", "G. F: 3 SHOPS with garage, special flat", "F. F: Owner special flat", "S. F: 2 Flats for rent.", "AUTOCAD PLANS DRAWING", "SKITCH UP 3D DRAWING", "SKITCHUP INSCAPE 6.5 RUNDER", "LUMION 11 RUNDER", "Finaly all praises to Allah in all time", "Arch.F11 .. .. .📐",
+    "من آخر الأعمال التي أنجزتها خلال الأيام الماضية.", "تم العمل بالتعاون مع مؤسسة الأهدل لعدة خدمات إنشائية وهندسية.", "الموقع: مدينة تعز — منطقة الحوبان.", "التاريخ: مايو 2025.", "المالك: عبدالعليم علي.", "نوع المشروع: تصميم منزل سكني.", "الدور الأرضي: 3 محلات مع موقف سيارات وشقة خاصة.", "الدور الأول: شقة خاصة بالمالك.", "الدور الثاني: شقتان للإيجار.", "إعداد المخططات التنفيذية باستخدام AutoCAD.", "إعداد نموذج ثلاثي الأبعاد باستخدام SketchUp.", "إخراج واقعي باستخدام Enscape 6.5.", "إخراج واقعي باستخدام Lumion 11.", "والحمد لله دائمًا وأبدًا.", "Arch.F11 .. .. .📐",
   ],
 };
