@@ -37,7 +37,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "27", title: "مبنى مسجد الإسكان الديني — سقطرى، قلنسية", client: "داعم متبرع", description: "تصميم معماري لمسجد الإسكان الديني في قلنسية، سقطرى.", start: "2026/01/01", end: "2026/01/12", duration: "0 سنوات 0 أشهر 11 أيام", updated: "2026/01/12",
-    image: "/manus-storage/masjid-exterior-hero_06a367a5.jpg", media: ["/manus-storage/masjid-interior-wide_eadb47a6.jpg", "/manus-storage/masjid-interior-sunset_b64c8f2f.jpg", "/manus-storage/masjid-interior-prayer_ccc7c339.jpg", "/manus-storage/masjid-exterior-logo_5c7cc124.jpg", "/manus-storage/masjid-exterior-documentation_c0c5d966.jpg"],
+    image: "https://raw.githubusercontent.com/DiyarEngineeringConsulting/ArchFahmi/main/assets/masjid-alsokan/masjid-exterior-hero.jpg", media: ["https://raw.githubusercontent.com/DiyarEngineeringConsulting/ArchFahmi/main/assets/masjid-alsokan/masjid-interior-wide.jpg", "https://raw.githubusercontent.com/DiyarEngineeringConsulting/ArchFahmi/main/assets/masjid-alsokan/masjid-interior-sunset.jpg", "https://raw.githubusercontent.com/DiyarEngineeringConsulting/ArchFahmi/main/assets/masjid-alsokan/masjid-interior-prayer.jpg", "https://raw.githubusercontent.com/DiyarEngineeringConsulting/ArchFahmi/main/assets/masjid-alsokan/masjid-exterior-logo.jpg", "https://raw.githubusercontent.com/DiyarEngineeringConsulting/ArchFahmi/main/assets/masjid-alsokan/masjid-exterior-documentation.jpg"],
   },
   {
     id: "26", title: "مبنى سكني استثماري", client: "محمد البريهي", description: "مبنى سكني استثماري طابقي", start: "2026/01/11", end: "2026/03/18", duration: "0 سنوات 2 أشهر 7 أيام", updated: "2026/07/22 11:17",
