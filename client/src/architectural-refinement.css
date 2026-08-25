@@ -20,6 +20,8 @@ body { background-color:var(--paper); background-image:radial-gradient(rgba(42,2
 .hero-grid { background-image:linear-gradient(rgba(213,152,114,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(213,152,114,.14) 1px,transparent 1px); }
 .signal-strip { background:var(--blue); color:var(--ivory); }
 .paper-section { background-color:var(--paper); background-image:linear-gradient(90deg,rgba(42,27,22,.04) 1px,transparent 1px),linear-gradient(rgba(42,27,22,.035) 1px,transparent 1px); background-size:88px 88px; }
+.about-layout > img { aspect-ratio:3 / 4; object-fit:cover; object-position:70% 24%; background:var(--ink-2); filter:saturate(1.08) contrast(1.02); }
+.profile-rail img { object-fit:cover; object-position:70% 18%; filter:saturate(1.14) contrast(1.03); }
 .profile-rail,.project-card,.blog-card,.timeline-card,.contact-layout { border-radius:3px; box-shadow:none; }
 .profile-rail { border:1px solid rgba(213,152,114,.32); }
 .metric-rail { max-width:1380px; margin:14px auto 0; display:grid; grid-template-columns:repeat(3,1fr); background:var(--ink-2); color:var(--ivory); border-top:2px solid var(--blue); }
@@ -84,7 +86,7 @@ body { overflow-x:hidden; }
   .project-image { border-left:0; border-bottom:1px solid rgba(213,152,114,.3); }
   .project-card,.project-card.offset { margin-inline:0; }
   .about-layout { grid-template-columns:1fr; gap:34px; }
-  .about-layout > img { width:100%; max-width:460px; margin-inline:auto; aspect-ratio:5 / 4; object-position:center; }
+  .about-layout > img { width:100%; max-width:460px; margin-inline:auto; aspect-ratio:4 / 5; object-position:70% 20%; }
   .about-copy { min-width:0; }
   .metric-rail { margin-top:10px; }
 }
@@ -116,7 +118,7 @@ body { overflow-x:hidden; }
   .section-heading h2 { font-size:clamp(2.05rem,10vw,2.7rem); }
   .section-heading > p { font-size:14px; line-height:1.8; }
   .about-layout { gap:26px; }
-  .about-layout > img { max-height:286px; aspect-ratio:1 / 1; }
+  .about-layout > img { max-height:420px; aspect-ratio:4 / 5; object-position:70% 18%; }
   .about-copy h2 { font-size:clamp(2rem,10vw,2.6rem); line-height:1.23; overflow-wrap:anywhere; }
   .about-copy > p:not(.eyebrow) { font-size:14px; line-height:1.9; }
   .profile-rail { margin-top:30px; }

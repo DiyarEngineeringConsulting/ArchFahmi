@@ -10,6 +10,7 @@ export const contact = {
   phone: "773691222",
   email: "fhmy773691222@gmail.com",
   profileImage: `${assetRoot}/profile_pictures/6906a814215b5_IMG-20250916-WA0001.jpg`,
+  aboutImage: "https://raw.githubusercontent.com/DiyarEngineeringConsulting/ArchFahmi/main/assets/fahmi-profile/fahmi-ali-engineer-profile.jpg",
   cv: `${assetRoot}/cvs/6906a81422968_السيرة%20الذاتية.pdf`,
   social: {
     facebook: "https://www.facebook.com/share/1Y1bWhLrkC/",
